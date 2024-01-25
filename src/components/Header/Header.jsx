@@ -1,13 +1,14 @@
 import reactImg from "../../assets/react-core-concepts.png";
 import "./Header.css";
-const reactDescriptions = ["Fundamental", "Crucial", "Abdo's"];
+import { REACT_DESCRIPTIONS } from "../../data.js";
+
 
 function genRandomInt(max) {
   return Math.floor(Math.random() * (max + 1));
 }
 
 export default function Header() {
-  const description = reactDescriptions[genRandomInt(2)];
+  const description = REACT_DESCRIPTIONS[genRandomInt(2)];
   return (
     <header>
       <img src={reactImg} alt="Stylized atom" />
